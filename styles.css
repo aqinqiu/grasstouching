@@ -1,0 +1,77 @@
+body {
+    background-color: #ffcc00;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+.header {
+    background-color: #ff0099;
+    padding: 20px;
+    color: white;
+}
+
+.grass {
+    position: relative;
+    margin-top: 50px;
+}
+
+.grass img {
+    max-width: 100%;
+    animation: shake 2s infinite;
+}
+
+.touch-button {
+    margin-top: 20px;
+}
+
+.touch_count {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff0099;
+    animation: bounce 1s infinite;
+}
+
+
+.hand {
+    animation: bounce 2s infinite;
+}
+
+
+@keyframes moveHand {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-150px); }
+}
+
+
+.hand.active {
+    animation: moveHand 3s alternate;
+}
+
+
+
+
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #00cc66;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
